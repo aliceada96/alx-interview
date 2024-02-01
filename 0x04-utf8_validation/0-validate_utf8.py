@@ -7,7 +7,7 @@ def validUTF8(data):
     Checks whether the input string is encoded in UTF-8.
 
     Args:
-    data (str): The string to be checked for UTF-8 compliance.
+    data (list of int): The list to be checked for UTF-8 compliance.
     Return: True if it is, False otherwise.
     """
     i = 0
