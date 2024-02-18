@@ -11,7 +11,6 @@ const movieUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 request(movieUrl, async (err, res, body) => {
   if (err) {
     console.log(err);
-    return;
   } else if (res.statusCode !== 200) {
     console.log('Unexpected status code: ', res.statusCode);
   } else {
@@ -24,14 +23,13 @@ request(movieUrl, async (err, res, body) => {
           request(url, (err, res, body) => {
             if (err) {
               console.error(err);
-              return;
             } else if (res.statusCode !== 200) {
               console.log('Unexpected status code: ', res.statusCode);
             } else {
               const data = JSON.parse(body).name;
               // Print the character name
               console.log(data);
-              resolve(data)
+              resolve(data);
             }
           });
         });
